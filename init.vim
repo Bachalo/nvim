@@ -1,16 +1,34 @@
-"
+"  ███▄    █ ▓█████  ▒█████   ██▒   █▓ ██▓ ███▄ ▄███▓    ▄████▄   ▒█████   ███▄    █  ██▓  █████▒ ▄████ 
+"  ██ ▀█   █ ▓█   ▀ ▒██▒  ██▒▓██░   █▒▓██▒▓██▒▀█▀ ██▒   ▒██▀ ▀█  ▒██▒  ██▒ ██ ▀█   █ ▓██▒▓██   ▒ ██▒ ▀█▒
+" ▓██  ▀█ ██▒▒███   ▒██░  ██▒ ▓██  █▒░▒██▒▓██    ▓██░   ▒▓█    ▄ ▒██░  ██▒▓██  ▀█ ██▒▒██▒▒████ ░▒██░▄▄▄░
+" ▓██▒  ▐▌██▒▒▓█  ▄ ▒██   ██░  ▒██ █░░░██░▒██    ▒██    ▒▓▓▄ ▄██▒▒██   ██░▓██▒  ▐▌██▒░██░░▓█▒  ░░▓█  ██▓
+" ▒██░   ▓██░░▒████▒░ ████▓▒░   ▒▀█░  ░██░▒██▒   ░██▒   ▒ ▓███▀ ░░ ████▓▒░▒██░   ▓██░░██░░▒█░   ░▒▓███▀▒
+" ░ ▒░   ▒ ▒ ░░ ▒░ ░░ ▒░▒░▒░    ░ ▐░  ░▓  ░ ▒░   ░  ░   ░ ░▒ ▒  ░░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░▓   ▒ ░    ░▒   ▒ 
+" ░ ░░   ░ ▒░ ░ ░  ░  ░ ▒ ▒░    ░ ░░   ▒ ░░  ░      ░     ░  ▒     ░ ▒ ▒░ ░ ░░   ░ ▒░ ▒ ░ ░       ░   ░ 
+"    ░   ░ ░    ░   ░ ░ ░ ▒       ░░   ▒ ░░      ░      ░        ░ ░ ░ ▒     ░   ░ ░  ▒ ░ ░ ░   ░ ░   ░ 
+"          ░    ░  ░    ░ ░        ░   ░         ░      ░ ░          ░ ░           ░  ░               ░ 
+"                                 ░                     ░                                               
+
+
+" My (minimalistic) neovim config.
+" Its mainly about the coc and autocompletion
+
+" Prerequisites:
+" - Neovim
+" - Whichever Nerd font for icons and other stuff.
+" - vim-plug
+
+"                               
 " PLUGINS
 "
 call plug#begin()
-        Plug 'neoclide/coc.nvim', {'branch': 'release'}
+        Plug 'ayu-theme/ayu-vim'
         Plug 'vim-airline/vim-airline'
         Plug 'vim-airline/vim-airline-themes'
-        Plug 'ayu-theme/ayu-vim'
+        Plug 'luochen1990/rainbow'
+        Plug 'neoclide/coc.nvim', {'branch': 'release'}
         Plug 'tpope/vim-fugitive'
         Plug 'airblade/vim-gitgutter'
-        Plug 'luochen1990/rainbow'
-        Plug 'kyazdani42/nvim-web-devicons' " for file icons
-        Plug 'kyazdani42/nvim-tree.lua'
 call plug#end()
 
 let g:airline_theme='minimalist'
@@ -47,13 +65,17 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 syntax on
-set mouse=a
-set number
+set nocompatible
+set showmatch
+set ignorecase
+set hlsearch
+set incsearch
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set incsearch
 set cursorline
+set mouse=a
+set number
 
 set termguicolors
 let ayucolor="dark"
