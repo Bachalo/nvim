@@ -21,11 +21,12 @@
 "                               
 " PLUGINS
 "
-call plug#begin()
+call plug#begin(stdpath('config').'/plugged')
         Plug 'ayu-theme/ayu-vim'
         Plug 'vim-airline/vim-airline'
         Plug 'vim-airline/vim-airline-themes'
         Plug 'luochen1990/rainbow'
+        Plug 'norcalli/nvim-colorizer.lua'
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
         Plug 'tpope/vim-fugitive'
         Plug 'airblade/vim-gitgutter'
@@ -77,6 +78,10 @@ set cursorline
 set mouse=a
 set number
 
+" Natural window splitting
+set splitbelow
+set splitright
+
 set termguicolors
 let ayucolor="dark"
 colorscheme ayu 
@@ -87,11 +92,21 @@ highlight Normal guibg=NONE ctermbg=NONE
 "
 " KEYBINDS
 "
+
+" leaders
+let g:mapleader = " "
+let g:maplocalleader = ','
+
 inoremap <C-c> <esc> " Rebind CTRL + C to escape key
-"nnoremap <C-n> :Ntree<CR>
+nnoremap <C-n> :Ntree<CR>
 nnoremap vs :vs<CR>
 nnoremap sp :sp<CR>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-J> <C-W><C-J>
+
+"
+" PLUGIN SPECIFIC CONFIGURATION
+"
+
