@@ -81,6 +81,9 @@ set termguicolors
 let ayucolor="dark"
 colorscheme ayu 
 
+" Overwrites colorscheme background color to be transparent.
+highlight Normal guibg=NONE ctermbg=NONE
+
 "
 " KEYBINDS
 "
