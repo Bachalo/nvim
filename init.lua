@@ -33,7 +33,8 @@ require('user.lualine-config')
 require('user.nvimtree-config')
 require('user.telescope-config')
 require('user.comment-nvim-config')
-require('user.lsp')
+require('user.tree-sitter-config')
+--require('user.lsp')
 -- require('user.nvimlsp_config')
 -- require('user.nvimlspinstaller_config')
 
@@ -42,6 +43,7 @@ return require('packer').startup({function()
 
   --> Visuals
   use 'ayu-theme/ayu-vim'
+  use 'ellisonleao/gruvbox.nvim'
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -50,8 +52,8 @@ return require('packer').startup({function()
   -- use 'norcalli/nvim-colorizer.lua'
 
   --> Git stuff
-  -- use 'tpope/vim-fugitive'
-  -- use 'airblade/vim-gitgutter'
+  use 'tpope/vim-fugitive'
+  use 'airblade/vim-gitgutter'
 
   --> Navigation
   use {
@@ -69,7 +71,7 @@ return require('packer').startup({function()
   use 'numToStr/Comment.nvim'
 
   --> LSP stuff
-	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } --> treesitter
+  use 'nvim-treesitter/nvim-treesitter'
 
   use 'neovim/nvim-lspconfig' --> Collection of configurations for the built-in LSP client
   use 'williamboman/nvim-lsp-installer' --> Automatic LSP servers installer
