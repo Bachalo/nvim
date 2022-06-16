@@ -1,18 +1,15 @@
---
---  ███▄    █ ▓█████  ▒█████   ██▒   █▓ ██▓ ███▄ ▄███▓    ▄████▄   ▒█████   ███▄    █  ██▓  █████▒ ▄███
---  ██ ▀█   █ ▓█   ▀ ▒██▒  ██▒▓██░   █▒▓██▒▓██▒▀█▀ ██▒   ▒██▀ ▀█  ▒██▒  ██▒ ██ ▀█   █ ▓██▒▓██   ▒ ██▒ ▀█▒
--- ▓██  ▀█ ██▒▒███   ▒██░  ██▒ ▓██  █▒░▒██▒▓██    ▓██░   ▒▓█    ▄ ▒██░  ██▒▓██  ▀█ ██▒▒██▒▒████ ░▒██░▄▄▄░
--- ▓██▒  ▐▌██▒▒▓█  ▄ ▒██   ██░  ▒██ █░░░██░▒██    ▒██    ▒▓▓▄ ▄██▒▒██   ██░▓██▒  ▐▌██▒░██░░▓█▒  ░░▓█  ██▓
--- ▒██░   ▓██░░▒████▒░ ████▓▒░   ▒▀█░  ░██░▒██▒   ░██▒   ▒ ▓███▀ ░░ ████▓▒░▒██░   ▓██░░██░░▒█░   ░▒▓███▀▒
--- ░ ▒░   ▒ ▒ ░░ ▒░ ░░ ▒░▒░▒░    ░ ▐░  ░▓  ░ ▒░   ░  ░   ░ ░▒ ▒  ░░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░▓   ▒ ░    ░▒   ▒
--- ░ ░░   ░ ▒░ ░ ░  ░  ░ ▒ ▒░    ░ ░░   ▒ ░░  ░      ░     ░  ▒     ░ ▒ ▒░ ░ ░░   ░ ▒░ ▒ ░ ░       ░   ░
---    ░   ░ ░    ░   ░ ░ ░ ▒       ░░   ▒ ░░      ░      ░        ░ ░ ░ ▒     ░   ░ ░  ▒ ░ ░ ░   ░ ░   ░
---          ░    ░  ░    ░ ░        ░   ░         ░      ░ ░          ░ ░           ░  ░               ░
---                                 ░                     ░
-
-
--- My (minimalistic) neovim config.
--- Its mainly about the lsp and autocompletion
+--[[
+   ███▄    █ ▓█████  ▒█████   ██▒   █▓ ██▓ ███▄ ▄███▓    ▄████▄   ▒█████   ███▄    █  ██▓  █████▒ ▄███
+   ██ ▀█   █ ▓█   ▀ ▒██▒  ██▒▓██░   █▒▓██▒▓██▒▀█▀ ██▒   ▒██▀ ▀█  ▒██▒  ██▒ ██ ▀█   █ ▓██▒▓██   ▒ ██▒ ▀█▒
+  ▓██  ▀█ ██▒▒███   ▒██░  ██▒ ▓██  █▒░▒██▒▓██    ▓██░   ▒▓█    ▄ ▒██░  ██▒▓██  ▀█ ██▒▒██▒▒████ ░▒██░▄▄▄░
+  ▓██▒  ▐▌██▒▒▓█  ▄ ▒██   ██░  ▒██ █░░░██░▒██    ▒██    ▒▓▓▄ ▄██▒▒██   ██░▓██▒  ▐▌██▒░██░░▓█▒  ░░▓█  ██▓
+  ▒██░   ▓██░░▒████▒░ ████▓▒░   ▒▀█░  ░██░▒██▒   ░██▒   ▒ ▓███▀ ░░ ████▓▒░▒██░   ▓██░░██░░▒█░   ░▒▓███▀▒
+  ░ ▒░   ▒ ▒ ░░ ▒░ ░░ ▒░▒░▒░    ░ ▐░  ░▓  ░ ▒░   ░  ░   ░ ░▒ ▒  ░░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░▓   ▒ ░    ░▒   ▒
+  ░ ░░   ░ ▒░ ░ ░  ░  ░ ▒ ▒░    ░ ░░   ▒ ░░  ░      ░     ░  ▒     ░ ▒ ▒░ ░ ░░   ░ ▒░ ▒ ░ ░       ░   ░
+     ░   ░ ░    ░   ░ ░ ░ ▒       ░░   ▒ ░░      ░      ░        ░ ░ ░ ▒     ░   ░ ░  ▒ ░ ░ ░   ░ ░   ░
+           ░    ░  ░    ░ ░        ░   ░         ░      ░ ░          ░ ░           ░  ░               ░
+                                  ░                     ░
+]]
 
 -- Prerequisites:
 --[[
@@ -22,10 +19,6 @@
   - BurntSushi/ripgrep (for livegrep support in telescope)
 ]]
 
---
--- PLUGINS
---
-
 require('user.vim-settings')
 require('user.keybinds')
 require('user.colors')
@@ -34,9 +27,7 @@ require('user.nvimtree-config')
 require('user.telescope-config')
 require('user.comment-nvim-config')
 require('user.tree-sitter-config')
---require('user.lsp')
--- require('user.nvimlsp_config')
--- require('user.nvimlspinstaller_config')
+require('user.lsp')
 
 return require('packer').startup({function()
   use 'wbthomason/packer.nvim' --> plugin manager itself
@@ -46,10 +37,11 @@ return require('packer').startup({function()
   use 'ellisonleao/gruvbox.nvim'
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    requires = {
+      'kyazdani42/nvim-web-devicons',
+      opt = true,
+    }
   }
-  -- use 'luochen1990/rainbow'
-  -- use 'norcalli/nvim-colorizer.lua'
 
   --> Git stuff
   use 'tpope/vim-fugitive'
@@ -62,21 +54,39 @@ return require('packer').startup({function()
       'kyazdani42/nvim-web-devicons'
     }
   }
+
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = {
+      {
+        'nvim-lua/plenary.nvim'
+      }
+    }
   }
 
   --> Commenting plugin
   use 'numToStr/Comment.nvim'
 
-  --> LSP stuff
+  --> Syntax highlighting
   use 'nvim-treesitter/nvim-treesitter'
 
+  --> Flutter Dev specific stuff
+  use 'thosakwe/vim-flutter'
+
+  --> Lsp stuff
   use 'neovim/nvim-lspconfig' --> Collection of configurations for the built-in LSP client
   use 'williamboman/nvim-lsp-installer' --> Automatic LSP servers installer
 
+  --> Completions stuff
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
 
+  --> Snippets stuff
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
 
 end,
 config = {
