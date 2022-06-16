@@ -7,10 +7,6 @@ keymap('n', '<C-S>', ':w<CR>', opts)
 
 keymap('n', 'vs', ':vs<CR>', opts)
 keymap('n', 'sp', ':sp<CR>', opts)
-keymap('n', '<C-L>', '<C-W><C-L>', opts)
-keymap('n', '<C-H>', '<C-W><C-H>', opts)
-keymap('n', '<C-K>', '<C-W><C-K>', opts)
-keymap('n', '<C-J>', '<C-W><C-J>', opts)
 
 keymap('n', 'tn', ':tabnew<CR>', opts)
 keymap('n', 'tk', ':tabnext<CR>', opts)
@@ -22,6 +18,7 @@ keymap('n', '<C-N>', ":NvimTreeToggle<CR> :vertical resize 30<CR>", opts)
 -- TELESCOPE KEYBINDS
 --
 
+keymap('n', '<C-p>', ':Telescope find_files<CR>', opts)
 keymap('n', '<leader>ff', ':Telescope find_files<CR>', opts)
 keymap('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
 keymap('n', '<leader>fb', ':Telescope buffers<CR>', opts)
@@ -44,7 +41,10 @@ nkeymap('gr', ':lua vim.lsp.buf.references()<cr>')
 nkeymap('gt', ':lua vim.lsp.buf.type_definition()<cr>')
 nkeymap('K', ':lua vim.lsp.buf.hover()<cr>')
 nkeymap('<c-k>', ':lua vim.lsp.buf.signature_help()<cr>')
+
 nkeymap('<leader>af', ':lua vim.lsp.buf.code_action()<cr>')
+
+nkeymap('<F2>', ':lua vim.lsp.buf.rename()<cr>')
 nkeymap('<leader>rn', ':lua vim.lsp.buf.rename()<cr>')
 
 --vim.api.nvim_set_keymap("n", "<leader>.", "<Plug>(coc-codeaction)", {})

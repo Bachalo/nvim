@@ -32,9 +32,12 @@ require('user.lsp')
 return require('packer').startup({function()
   use 'wbthomason/packer.nvim' --> plugin manager itself
 
-  --> Visuals
+  --> Colorschemes
   use 'ayu-theme/ayu-vim'
   use 'ellisonleao/gruvbox.nvim'
+  use 'folke/tokyonight.nvim'
+
+  --> Status line
   use {
     'nvim-lualine/lualine.nvim',
     requires = {
