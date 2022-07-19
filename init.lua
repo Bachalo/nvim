@@ -27,6 +27,7 @@ require('user.nvimtree-config')
 require('user.telescope-config')
 require('user.comment-nvim-config')
 require('user.tree-sitter-config')
+require('user.trouble-config')
 require('user.lsp')
 
 return require('packer').startup({function()
@@ -90,6 +91,12 @@ return require('packer').startup({function()
   --> Snippets stuff
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
+
+  --> Better error messages
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+  }
 
 end,
 config = {
