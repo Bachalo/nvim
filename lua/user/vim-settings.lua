@@ -9,6 +9,7 @@ vim.o.shiftwidth = 2
 vim.o.cursorline = true
 vim.o.mouse = 'a'
 vim.o.number = true
+vim.o.relativenumber = true
 vim.o.wrap = false
 
 vim.o.encoding = "utf-8"
